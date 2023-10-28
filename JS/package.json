@@ -1,0 +1,15 @@
+{
+  "name": "pcmonitorjsapp",
+  "version": "1.0.0",
+  "description": "js implementation of the pcmonitorconsoleapp",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "author": "CWX-DEV",
+  "license": "ISC",
+  "dependencies": {
+    "systeminformation": "^5.21.15"
+  }
+}
