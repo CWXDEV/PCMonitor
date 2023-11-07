@@ -19,7 +19,7 @@ namespace PCMonitorConsoleApp
             };
 
             var timer = new Timer();
-            timer.Interval = 5000;
+            timer.Interval = 1000;
             timer.Elapsed += OnUpdate;
             timer.Start();
 
@@ -30,9 +30,13 @@ namespace PCMonitorConsoleApp
         {
             HardwareHelper.GetInstance?.UpdateHardware();
             var test = HardwareHelper.GetInstance?.GetCpu();
-            var cpu1 = test?.Sensors.FirstOrDefault(x => x.SensorType is SensorType.Load);
+            var cpu = test?.Sensors.FirstOrDefault(x => x.SensorType is SensorType.Load);
+
+            var test2 = HardwareHelper.GetInstance?.GetGpu();
+            var gpu = test2?.Sensors.FirstOrDefault(x => x.SensorType == SensorType.Load);
             
-            AnsiConsole.WriteLine($"CPU1 Load: {cpu1?.Value ?? 0}");
+            AnsiConsole.WriteLine($"CPU Load: {cpu?.Value ?? 0}");
+            AnsiConsole.WriteLine($"GPU Load: {gpu?.Value ?? 0}");
         }
     }
 }

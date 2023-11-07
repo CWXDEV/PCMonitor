@@ -6,3 +6,10 @@ Repo to test and research getting systeminformation to use with a GUI.
 
 # C#
 - Alot faster than JS, has the ability to "update" the info too. 
+
+
+# GoLang
+
+# C++ ?
+
+# Rust ?
